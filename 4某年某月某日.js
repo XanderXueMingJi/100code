@@ -2,7 +2,6 @@
 
 
 
-
 function getDay(date) {
     // date = {
     //     year: 2018,
@@ -18,7 +17,7 @@ function getDay(date) {
     }else {
         arr = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     }
-    for(var i = arr.length - 1; i > 0 ; i--) {
+    for(var i = arr.length - 1; i >= 0 ; i--) {
         if(i + 1 === date.mon) {
             num += date.day;
         }else if(i + 1 < date.mon) {
@@ -36,9 +35,17 @@ var obj = {
 }
 
 
-getDay(obj) // 127  实际应该是158有问题!!
+getDay(obj)
 
+// 以上实例输出结果为：
 
+// year:
+// 2015
+// month:
+// 6
+// day:
+// 7
+// it is the 158th day. 成功!!!
 
 
 
